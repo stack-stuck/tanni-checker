@@ -532,4 +532,22 @@
 	"kaijo": "0",
 	"keisisu": "0",
 	"kokkei": "2"
+}, {
+	"kougi": "ゼミナールI",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "ゼミナールII",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "経営の英語",
+	"keikei": "1",
+	"kaijo": "1",
+	"keisisu": "1",
+	"kokkei": "1"
 }]

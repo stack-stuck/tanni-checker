@@ -88,3 +88,6 @@ kougi,keikei,kaijo,keisisu,kokkei
 ”äŠrĞ‰ï•¶‰»˜_II,0,0,0,2
 ”äŠr‹ZpŒo‰c˜_I,0,0,0,2
 ”äŠr‹ZpŒo‰c˜_II,0,0,0,2
+ƒ[ƒ~ƒi[ƒ‹I,0,0,0,0
+ƒ[ƒ~ƒi[ƒ‹II,0,0,0,0
+Œo‰c‚Ì‰pŒê,1,1,1,1
