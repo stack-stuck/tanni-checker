@@ -108,11 +108,11 @@
 				
 				function cleanup_tab(){
 					$('#required').empty();
-					$('#required').append('<div class="checkbox"></div>');
+					$('#required').append('<div class="btn-group" data-toggle="buttons"></div>');
 					$('#selectable').empty();
-					$('#selectable').append('<div class="checkbox"></div>');
+					$('#selectable').append('<div class="btn-group" data-toggle="buttons"></div>');
 					$('#notrequired').empty();
-					$('#notrequired').append('<div class="checkbox"></div>');
+					$('#notrequired').append('<div class="btn-group" data-toggle="buttons"></div>');
 				}
 				
 				function refresh_list(_this){
@@ -134,19 +134,19 @@
 					});
 					
 					
-					let marker = $('#required').find('.checkbox');
+					let marker = $('#required').find('.btn-group');
 					required.forEach(function(value,index){
-						marker.append('<label><input type="checkbox" id="req'+index+'">'+value+'</label>');
+						marker.append('<label class="btn btn-primary"><input type="checkbox" autocomplete="off id="req'+index+'">'+value+'</label>');
 					});
 					
-					marker = $('#selectable').find('.checkbox');
+					marker = $('#selectable').find('.btn-group');
 					selectable.forEach(function(value,index){
-						marker.append('<label><input type="checkbox" id="req'+index+'">'+value+'</label>');
+						marker.append('<label class="btn btn-primary"><input type="checkbox" autocomplete="off id="sel'+index+'">'+value+'</label>');
 					});
 					
-					marker = $('#notrequired').find('.checkbox');
+					marker = $('#notrequired').find('.btn-group');
 					notrequired.forEach(function(value,index){
-						marker.append('<label><input type="checkbox" id="req'+index+'">'+value+'</label>');
+						marker.append('<label class="btn btn-primary"><input type="checkbox" autocomplete="off id="noreq'+index+'">'+value+'</label>');
 					});
 				}
 			});
