@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrapの基本テンプレート</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="header row jumbotron">横国経営学部卒業チェッカー</div>
+			<div class="main">
+				<div class="row">
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active"><a href="#home" data-toggle="tab">基本設定</a></li>
+						<li role="presentation"><a href="#required" data-toggle="tab">必修</a></li>
+						<li role="presentation"><a href="#selectable" data-toggle="tab">選択必修</a></li>
+						<li role="presentation"><a href="#notrequired" data-toggle="tab">その他専門</a></li>
+					</ul>
+					<div class="well tab-content">
+						<div class="tab-pane active" id="home">home</div>
+						<div class="tab-pane" id="required">required</div>
+						<div class="tab-pane" id="selectable">selectable</div>
+						<div class="tab-pane" id="notrequired">notrequired</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer row"><button type="submit" class="btn btn-info">計算</button></div>
+		</div>
+		
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
