@@ -90,13 +90,37 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script>
 			$(function(){
-			//学科選択に伴うあれこれ
-			//http://objc-lovers.com/archives/191
-			$('.dropdown-menu li a').click(function(){
-				$(this).parents('.btn-group').find('.dropdown-toggle').html($(this).text() + ' <span class="caret"></span>');
-				$(this).parents('.btn-group').find('input[name="gakka"]').val($(this).attr("data-value"));
-				$('#calculate').removeAttr('disabled');
-			});
+				var required,selectable,notrequired;
+				var senmon_data;
+				$.getJSON("list.json", function(json){
+					senmon_data = json
+				});
+				
+				//学科選択に伴うあれこれ
+				//http://objc-lovers.com/archives/191
+				$('.dropdown-menu li a').click(function(){
+					$(this).parents('.btn-group').find('.dropdown-toggle').html($(this).text() + ' <span class="caret"></span>');
+					$(this).parents('.btn-group').find('input[name="gakka"]').val($(this).attr("data-value"));
+					$('#calculate').removeAttr('disabled');
+					refresh_list(this);
+				});
+				
+				function refresh_list(_this){
+					required = selectable = notrequired = [];
+					let selected_gakka = $(_this).attr("data-value")
+					
+					senmon_data.foreach(function(value,index){
+						if(value[selected_gakka] == 1){
+							required.push(value["kougi"]);
+						}else if(value[selected_gakka] == 2){
+							selectable.push(value["kougi"]);
+						}else if(value[selected_gakka] == 0){
+							notrequired.push(value["kougi"]);
+						}else{
+							alert("異常値");
+						}
+					}
+				}
 			});
 		</script>
 	</body>
