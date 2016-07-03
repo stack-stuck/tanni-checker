@@ -107,7 +107,7 @@
 				
 				function refresh_list(_this){
 					required = selectable = notrequired = [];
-					let selected_gakka = $(_this).attr("data-value")
+					let selected_gakka = $(_this).attr("data-value");
 					
 					senmon_data.foreach(function(value,index){
 						if(value[selected_gakka] == 1){
