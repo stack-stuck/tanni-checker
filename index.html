@@ -83,7 +83,7 @@
 					</form>
 				</div>
 			</div>
-			<div class="footer row"><button type="submit" class="btn btn-info disabled">計算</button></div>
+			<div class="footer row"><button type="submit" class="btn btn-info" id="calculate" disabled>計算</button></div>
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -95,6 +95,7 @@
 			$('.dropdown-menu li a').click(function(){
 				$(this).parents('.btn-group').find('.dropdown-toggle').html($(this).text() + ' <span class="caret"></span>');
 				$(this).parents('.btn-group').find('input[name="gakka"]').val($(this).attr("data-value"));
+				$('#calculate').removeAttr('disabled');
 			});
 			});
 		</script>
