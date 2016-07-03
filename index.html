@@ -16,26 +16,28 @@
 			<div class="header row jumbotron">横国経営学部卒業チェッカー</div>
 			<div class="main">
 				<div class="row">
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active"><a href="#home" data-toggle="tab">基本設定</a></li>
+						<li role="presentation"><a href="#required" data-toggle="tab">必修</a></li>
+						<li role="presentation"><a href="#selectable" data-toggle="tab">選択必修</a></li>
+						<li role="presentation"><a href="#notrequired" data-toggle="tab">その他専門</a></li>
+					</ul>
 					<form>
-						<ul class="nav nav-tabs">
-							<li role="presentation" class="active"><a href="#home" data-toggle="tab">基本設定</a></li>
-							<li role="presentation"><a href="#required" data-toggle="tab">必修</a></li>
-							<li role="presentation"><a href="#selectable" data-toggle="tab">選択必修</a></li>
-							<li role="presentation"><a href="#notrequired" data-toggle="tab">その他専門</a></li>
-						</ul>
 						<div class="well tab-content">
-							<div class="tab-pane active" id="home">home</div>
+							<div class="tab-pane active" id="home">
 								<div class="btn-group">
 									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 										学科を選択してください <span class="caret"></span>
 									</button>
 									<ul class="dropdown-menu">
-										<li><a href="#">経営学科</a></li>
-										<li><a href="#">会計・情報学科</a></li>
-										<li><a href="#">経営システム科学科</a></li>
-										<li><a href="#">国際経営学科</a></li>
+										<li><a href="#" data-value="keikei">経営学科</a></li>
+										<li><a href="#" data-value="kaijo">会計・情報学科</a></li>
+										<li><a href="#" data-value="keisisu">経営システム科学科</a></li>
+										<li><a href="#" data-value="kokkei">国際経営学科</a></li>
 									</ul>
+									<input type="hidden" name="gakka" value="">
 								</div>
+							</div>
 							<div class="tab-pane" id="required">required</div>
 							<div class="tab-pane" id="selectable">selectable</div>
 							<div class="tab-pane" id="notrequired">notrequired</div>
@@ -43,10 +45,20 @@
 					</form>
 				</div>
 			</div>
-			<div class="footer row"><button type="submit" class="btn btn-info">計算</button></div>
+			<div class="footer row"><button type="submit" class="btn btn-info disabled">計算</button></div>
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(function(){
+			//学科選択に伴うあれこれ
+			//http://objc-lovers.com/archives/191
+			$('.dropdown-menu li a').click(function(){
+				$(this).parents('.btn-group').find('.dropdown-toggle').html($(this).text() + ' <span class="caret"></span>');
+				$(this).parents('.btn-group').find('input[name="gakka"]').val($(this).attr("data-value"));
+			});
+			});
+		</script>
 	</body>
 </html>
