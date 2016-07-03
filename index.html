@@ -110,6 +110,101 @@
 					refresh_list(this);
 				});
 				
+				//単位計算。長過ぎるのでリファクタしたい。evalとか使えそう
+				$('#calculate').click(function(){
+					//単位数算出
+					let jinbun = Number($('#jinbun').val());
+					let sizen = Number($('#sizen').val());
+					let gendai = Number($('#gendai').val());
+					let sougou = Number($('#sougou').val());
+					let core = jinbun+sizen+gendai+sougou;
+					let english = Number($('#english').val());
+					let nigai = Number($('#nigai').val());
+					let kensupo = Number($('#kensupo').val());
+					let pankyo = core+english+nigai+kensupo;
+					
+					let all_required = $('#required').find('label').size()
+					let pressed_required = $('#required').find('label.active').size()
+					let all_selectable = $('#selectable').find('label').size()
+					let pressed_selectable = $('#selectable').find('label.active').size()
+					let all_notrequired = $('#notrequired').find('label').size()
+					let pressed_notrequired = $('#notrequired').find('label.active').size()
+					
+					//結果タブ削除
+					$('#result').empty();
+					$('ul.nav-tabs').find('a[href="#result"]').parents('li[role="presentation"]').remove();
+					//結果タブ作成
+					$('ul.nav-tabs').append('<li role="presentation"><a href="#result" data-toggle="tab">結果</a></li>');
+					$('.tab-content').append('<div class="tab-pane" id="result">').tab('show');
+					$('ul.nav-tabs a:last').tab('show');
+					let result = $('#result');
+					
+					let req_jinbun = 4;
+					let req_sizen = 4;
+					let req_gendai = 2;
+					let req_sougou = 2;
+					let req_core = 24;
+					let req_english = 8;
+					let req_nigai = 6;
+					let lim_kensupo = 2;
+					let req_pankyo = 38;
+					
+					//国経だけは選択必修が8単位でよい
+					let req_selectable_kokkei = 8;
+					let req_selectable_other = 12;
+					let req_ba = 76;
+					let req_all = 128;
+					
+					if(jinbun < req_jinbun){
+						result.append("<p>人文足りてない("+jinbun+"/"+req_jinbun+")");
+					}
+					if(sizen < req_sizen){
+						result.append("<p>自然足りてない("+sizen+"/"+req_sizen+")");
+					}
+					if(gendai < req_gendai){
+						result.append("<p>現代足りてない("+gendai+"/"+req_gendai+")");
+					}
+					if(sougou < req_sougou){
+						result.append("<p>総合足りてない("+sougou+"/"+req_sougou+")");
+					}
+					if(core < req_core){
+						result.append("<p>コア足りてない("+core+"/"+req_core+")");
+					}
+					if(english < req_english){
+						result.append("<p>英語足りてない("+english+"/"+req_english+")");
+					}
+					if(nigai < req_nigai){
+						result.append("<p>二外足りてない("+nigai+"/"+req_nigai+")");
+					}
+					if(kensupo > lim_kensupo){
+						kensupo = lim_kensupo;
+					}
+					if(pankyo < req_pankyo){
+						result.append("<p>般教足りてない("+pankyo+"/"+req_pankyo+")");
+					}
+					//以下専門
+					if(pressed_required < all_required){
+						result.append("<p>必修足りてない("+pressed_required+"/"+all_required+")");
+					}
+					
+					let req_selectable;
+					if($('.dropdown-menu li a').attr("data-value") === "kokkei"){
+						req_selectable = req_selectable_kokkei;
+					}else{
+						req_selectable = req_selectable_other;
+					}
+					if(pressed_selectable < req_selectable_kokkei){
+						result.append("<p>選択必修足りてない("+pressed_selectable*2+"/"+req_selectable+")");
+					}
+					
+					if(pressed_required+pressed_selectable+pressed_notrequired < req_ba){
+						result.append("<p>専門足りてない("+(pressed_required+pressed_selectable+pressed_notrequired)*2+"/"+req_ba+")");
+					}
+					if(pankyo+pressed_required+pressed_selectable+pressed_notrequired < req_all){
+						result.append("<p>総単位数足りてない("+(pankyo+pressed_required+pressed_selectable+pressed_notrequired)*2+"/"+req_all+")");
+					}
+				});
+				
 				function cleanup_tab(){
 					$('#required').empty();
 					$('#required').append('<div class="btn-group" data-toggle="buttons"></div>');
