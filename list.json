@@ -1,91 +1,535 @@
-{[
- 	{  "kougi" : "経営学総論I",  "keikei" : "1",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "1",  },
-	{  "kougi" : "経営学総論II",  "keikei" : "1",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "1",  },
-	{  "kougi" : "企業と社会",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "経営管理論I",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "経営管理論II",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "経営戦略論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "経営組織論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "組織間関係論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "現代企業論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "イノベーションマネジメント論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "経営史",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "人的資源管理論I",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "人的資源管理論II",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "現代コミュニケーション論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "行動科学",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "グループ・ダイナミクス",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "産業社会学I",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "産業社会学II",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "人間科学I",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "人間科学II",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "環境マネジメント論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "環境計画学",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "産業分析",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "産業組織論",  "keikei" : "2",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "簿記原理I",  "keikei" : "1",  "kaijo" : "1",  "keisisu" : "1",  "kokkei" : "1",  },
-	{  "kougi" : "簿記原理II",  "keikei" : "1",  "kaijo" : "1",  "keisisu" : "1",  "kokkei" : "1",  },
-	{  "kougi" : "会計学原理I",  "keikei" : "0",  "kaijo" : "1",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "会計学原理II",  "keikei" : "0",  "kaijo" : "1",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "制度会計論",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "会計監査論I",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "会計監査論II",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "公会計論I",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "公会計論II",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "税務会計論I",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "税務会計論II",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "戦略会計論",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "原価会計論",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "管理会計論I",  "keikei" : "0",  "kaijo" : "1",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "管理会計論II",  "keikei" : "0",  "kaijo" : "1",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "生態会計論I",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "生態会計論II",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "国民会計論I",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "国民会計論II",  "keikei" : "0",  "kaijo" : "2",  "keisisu" : "0",  "kokkei" : "0",  },
-	{  "kougi" : "経営科学総論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "1",  "kokkei" : "0",  },
-	{  "kougi" : "ビジネス・エコノミクス",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "1",  "kokkei" : "0",  },
-	{  "kougi" : "意思決定論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "経営数学",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "生産システム論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "オペレーションズ・リサーチI",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "オペレーションズ・リサーチII",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "データ解析論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "経営情報論IA",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "1",  "kokkei" : "0",  },
-	{  "kougi" : "経営情報論IIA",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "グループ思考システム論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "マーケティング戦略論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "消費者行動論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "マーケティング・サイエンス",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "流通論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "経営財務論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "ファイナンシャルリスクマネジメント",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "証券市場論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "ファイナンシャル・エコノミクス",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "情報システム論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "ビジネスゲーム",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "インターネット・ビジネス・プランニング",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "2",  "kokkei" : "0",  },
-	{  "kougi" : "国際経営論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "1",  },
-	{  "kougi" : "国際経営論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際人事管理論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際人事管理論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際マーケティング論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際マーケティング論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "グローバル・イノベーション・マネジメント論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "グローバル・イノベーション・マネジメント論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際会計論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際会計論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際財務論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際財務論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較経営論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "1",  },
-	{  "kougi" : "比較経営論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較経営史I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較経営史II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較金融制度論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較金融制度論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "国際コミュニケーション論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "言語コミュニケーション論",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較社会文化論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較社会文化論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較技術経営論I",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-	{  "kougi" : "比較技術経営論II",  "keikei" : "0",  "kaijo" : "0",  "keisisu" : "0",  "kokkei" : "2",  },
-]};
+[{
+	"kougi": "経営学総論I",
+	"keikei": "1",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "1"
+}, {
+	"kougi": "経営学総論II",
+	"keikei": "1",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "1"
+}, {
+	"kougi": "企業と社会",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "経営管理論I",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "経営管理論II",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "経営戦略論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "経営組織論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "組織間関係論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "現代企業論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "イノベーションマネジメント論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "経営史",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "人的資源管理論I",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "人的資源管理論II",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "現代コミュニケーション論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "行動科学",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "グループ・ダイナミクス",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "産業社会学I",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "産業社会学II",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "人間科学I",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "人間科学II",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "環境マネジメント論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "環境計画学",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "産業分析",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "産業組織論",
+	"keikei": "2",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "簿記原理I",
+	"keikei": "1",
+	"kaijo": "1",
+	"keisisu": "1",
+	"kokkei": "1"
+}, {
+	"kougi": "簿記原理II",
+	"keikei": "1",
+	"kaijo": "1",
+	"keisisu": "1",
+	"kokkei": "1"
+}, {
+	"kougi": "会計学原理I",
+	"keikei": "0",
+	"kaijo": "1",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "会計学原理II",
+	"keikei": "0",
+	"kaijo": "1",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "制度会計論",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "会計監査論I",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "会計監査論II",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "公会計論I",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "公会計論II",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "税務会計論I",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "税務会計論II",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "戦略会計論",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "原価会計論",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "管理会計論I",
+	"keikei": "0",
+	"kaijo": "1",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "管理会計論II",
+	"keikei": "0",
+	"kaijo": "1",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "生態会計論I",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "生態会計論II",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "国民会計論I",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "国民会計論II",
+	"keikei": "0",
+	"kaijo": "2",
+	"keisisu": "0",
+	"kokkei": "0"
+}, {
+	"kougi": "経営科学総論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "1",
+	"kokkei": "0"
+}, {
+	"kougi": "ビジネス・エコノミクス",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "1",
+	"kokkei": "0"
+}, {
+	"kougi": "意思決定論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "経営数学",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "生産システム論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "オペレーションズ・リサーチI",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "オペレーションズ・リサーチII",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "データ解析論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "経営情報論IA",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "1",
+	"kokkei": "0"
+}, {
+	"kougi": "経営情報論IIA",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "グループ思考システム論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "マーケティング戦略論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "消費者行動論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "マーケティング・サイエンス",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "流通論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "経営財務論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "ファイナンシャルリスクマネジメント",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "証券市場論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "ファイナンシャル・エコノミクス",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "情報システム論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "ビジネスゲーム",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "インターネット・ビジネス・プランニング",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "2",
+	"kokkei": "0"
+}, {
+	"kougi": "国際経営論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "1"
+}, {
+	"kougi": "国際経営論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際人事管理論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際人事管理論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際マーケティング論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際マーケティング論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "グローバル・イノベーション・マネジメント論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "グローバル・イノベーション・マネジメント論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際会計論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際会計論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際財務論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際財務論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較経営論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "1"
+}, {
+	"kougi": "比較経営論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較経営史I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較経営史II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較金融制度論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較金融制度論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "国際コミュニケーション論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "言語コミュニケーション論",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較社会文化論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較社会文化論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較技術経営論I",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}, {
+	"kougi": "比較技術経営論II",
+	"keikei": "0",
+	"kaijo": "0",
+	"keisisu": "0",
+	"kokkei": "2"
+}]

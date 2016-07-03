@@ -1,3 +1,4 @@
+kougi,keikei,kaijo,keisisu,kokkei
 経営学総論I,1,0,0,1
 経営学総論II,1,0,0,1
 企業と社会,2,0,0,0
