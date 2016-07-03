@@ -25,18 +25,56 @@
 					<form>
 						<div class="well tab-content">
 							<div class="tab-pane active" id="home">
-								<div class="btn-group">
-									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-										学科を選択してください <span class="caret"></span>
-									</button>
-									<ul class="dropdown-menu">
-										<li><a href="#" data-value="keikei">経営学科</a></li>
-										<li><a href="#" data-value="kaijo">会計・情報学科</a></li>
-										<li><a href="#" data-value="keisisu">経営システム科学科</a></li>
-										<li><a href="#" data-value="kokkei">国際経営学科</a></li>
-									</ul>
-									<input type="hidden" name="gakka" value="">
+								<div class="form-group">
+									<label for="gakka">学科選択</label><br>
+									<div class="btn-group">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											学科を選択してください <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu">
+											<li><a href="#" data-value="keikei">経営学科</a></li>
+											<li><a href="#" data-value="kaijo">会計・情報学科</a></li>
+											<li><a href="#" data-value="keisisu">経営システム科学科</a></li>
+											<li><a href="#" data-value="kokkei">国際経営学科</a></li>
+										</ul>
+										<input type="hidden" id="gakka" value="">
+									</div>
 								</div>
+								<div class="form-group">
+									<label for="jinbun">獲得済み人文社会系単位</label>
+									<input type="number" class="form-control" id="jinbun" value=0 required>
+								</div>
+								<div class="form-group">
+									<label for="sizen">獲得済み自然科学系単位</label>
+									<input type="number" class="form-control" id="sizen" value=0 required>
+								</div>
+								<div class="form-group">
+									<label for="gendai">獲得済み現代系単位</label>
+									<input type="number" class="form-control" id="gendai" value=0 required>
+								</div>
+								<div class="form-group">
+									<label for="sougou">獲得済み総合系単位</label>
+									<input type="number" class="form-control" id="sougou" value=0 required>
+								</div>
+								<div class="form-group">
+									<label for="english">獲得済み英語単位</label>
+									<input type="number" class="form-control" id="english" value=0 required>
+								</div>
+								<div class="form-group">
+									<label for="nigai">獲得済み第二第三外国語単位</label>
+									<input type="number" class="form-control" id="nigai" value=0 required>
+								</div>
+								<!--
+								<div class="checkbox">
+									<label><input type="checkbox" id="1s">英語実習1S</label>
+									<label><input type="checkbox" id="1w">英語実習1W</label>
+									<label><input type="checkbox" id="1LRs">英語実習1LR春</label>
+									<label><input type="checkbox" id="1LRf">英語実習1LR秋</label>
+									<label><input type="checkbox" id="2sw">英語実習2SW</label>
+									<label><input type="checkbox" id="2LR">英語実習2LR</label>
+									<label><input type="checkbox" id="2eL">英語演習</label>
+								</div>
+								-->
 							</div>
 							<div class="tab-pane" id="required">required</div>
 							<div class="tab-pane" id="selectable">selectable</div>
