@@ -102,14 +102,26 @@
 					$(this).parents('.btn-group').find('.dropdown-toggle').html($(this).text() + ' <span class="caret"></span>');
 					$(this).parents('.btn-group').find('input[name="gakka"]').val($(this).attr("data-value"));
 					$('#calculate').removeAttr('disabled');
+					cleanup_tab();
 					refresh_list(this);
 				});
 				
+				function cleanup_tab(){
+					$('#required').empty();
+					$('#required').append('<div class="checkbox"></div>');
+					$('#selectable').empty();
+					$('#selectable').append('<div class="checkbox"></div>');
+					$('#notrequired').empty();
+					$('#notrequired').append('<div class="checkbox"></div>');
+				}
+				
 				function refresh_list(_this){
-					required = selectable = notrequired = [];
+					required = [];
+					selectable = [];
+					notrequired = [];
 					let selected_gakka = $(_this).attr("data-value");
 					
-					senmon_data.foreach(function(value,index){
+					senmon_data.forEach(function(value,index){
 						if(value[selected_gakka] == 1){
 							required.push(value["kougi"]);
 						}else if(value[selected_gakka] == 2){
@@ -119,7 +131,23 @@
 						}else{
 							alert("異常値");
 						}
-					}
+					});
+					
+					
+					let marker = $('#required').find('.checkbox');
+					required.forEach(function(value,index){
+						marker.append('<label><input type="checkbox" id="req'+index+'">'+value+'</label>');
+					});
+					
+					marker = $('#selectable').find('.checkbox');
+					selectable.forEach(function(value,index){
+						marker.append('<label><input type="checkbox" id="req'+index+'">'+value+'</label>');
+					});
+					
+					marker = $('#notrequired').find('.checkbox');
+					notrequired.forEach(function(value,index){
+						marker.append('<label><input type="checkbox" id="req'+index+'">'+value+'</label>');
+					});
 				}
 			});
 		</script>
